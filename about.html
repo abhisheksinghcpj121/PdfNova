@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - PDFNova</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+        </div>
+        <span>PDFNova</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#popularTools" class="nav-link">Tools</a></li>
+          <li><a href="editor.html" class="nav-link">PDF Editor</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="faq.html" class="nav-link">Help</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" aria-label="Toggle Dark Mode"></button>
+        <a href="index.html" class="btn btn-primary btn-sm">Explore Tools</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Hero -->
+  <main class="container section" style="padding: 60px 24px;">
+    <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+      <div class="hero-badge" style="margin: 0 auto 16px;">
+        <span class="dot"></span>
+        <span>Our Mission & Platform</span>
+      </div>
+      <h1 style="font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px;">
+        About PDFNova
+      </h1>
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 48px;">
+        PDFNova is a powerful, easy-to-use, and secure online platform for all your PDF needs. Our mission is to make PDF tools simple, accessible, and privacy-focused for everyone.
+      </p>
+    </div>
+
+    <!-- Core Pillars Grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 1040px; margin: 0 auto;">
+      <div class="tool-card" style="text-align: center; align-items: center;">
+        <div class="tool-card-icon coral" style="width: 56px; height: 56px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="tool-card-title">Fast</h3>
+        <p class="tool-card-desc">High performance streaming processing with zero unnecessary latency.</p>
+      </div>
+
+      <div class="tool-card" style="text-align: center; align-items: center;">
+        <div class="tool-card-icon mint" style="width: 56px; height: 56px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3 class="tool-card-title">Secure</h3>
+        <p class="tool-card-desc">Your privacy matters. Documents live in temporary sandboxes with strict auto-wipe.</p>
+      </div>
+
+      <div class="tool-card" style="text-align: center; align-items: center;">
+        <div class="tool-card-icon blue" style="width: 56px; height: 56px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <h3 class="tool-card-title">Easy to Use</h3>
+        <p class="tool-card-desc">Clean, welcoming, and intuitive interface designed for humans, not manuals.</p>
+      </div>
+
+      <div class="tool-card" style="text-align: center; align-items: center;">
+        <div class="tool-card-icon violet" style="width: 56px; height: 56px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="tool-card-title">Cross Platform</h3>
+        <p class="tool-card-desc">Works smoothly on desktop, tablet, and mobile browsers with zero software installs.</p>
+      </div>
+    </div>
+
+    <!-- Architectural Overview -->
+    <div style="max-width: 820px; margin: 60px auto 0; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 36px; box-shadow: var(--shadow-sm);">
+      <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 14px;">The Engineering Philosophy Behind PDFNova</h3>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+        Unlike traditional monolithic PDF converters, PDFNova is architected with modern modular web standards:
+      </p>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.92rem; color: var(--text-secondary);">
+        <li style="display:flex;gap:10px;">
+          <span style="color:var(--mint);font-weight:700;">✓</span>
+          <span><strong>Zero Database Footprint:</strong> We deliberately avoid permanent databases. Jobs are ephemeral and track lifecycle state within sandboxed directories.</span>
+        </li>
+        <li style="display:flex;gap:10px;">
+          <span style="color:var(--mint);font-weight:700;">✓</span>
+          <span><strong>Pure Vanilla Frontend:</strong> Zero framework overhead. Built using high-speed standard HTML5, CSS3, and Vanilla JavaScript for instant page loads.</span>
+        </li>
+        <li style="display:flex;gap:10px;">
+          <span style="color:var(--mint);font-weight:700;">✓</span>
+          <span><strong>Cryptographic Capability Tokens:</strong> Downloads and deletion actions require unique random cryptographically generated tokens to prevent cross-user enumeration.</span>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+      <div>© 2026 PDFNova Platform. All rights reserved.</div>
+      <div style="display:flex;gap:16px;">
+        <a href="privacy.html">Privacy</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

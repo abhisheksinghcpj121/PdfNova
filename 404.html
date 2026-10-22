@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | PDFNova</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/theme.js"></script>
+</head>
+<body style="display:flex;flex-direction:column;min-height:100vh;">
+
+  <!-- Simple Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+        </div>
+        <span>PDFNova</span>
+      </a>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" aria-label="Toggle Dark Mode"></button>
+        <a href="index.html" class="btn btn-primary btn-sm">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Content Matching Mockup -->
+  <main class="container" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;">
+    <!-- 404 Document Illustration -->
+    <div style="position:relative;width:96px;height:120px;background:var(--primary-subtle);border:2px solid var(--primary);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:28px;box-shadow:var(--shadow-glow);">
+      <div style="font-size:1.85rem;font-weight:800;color:var(--primary);letter-spacing:0.04em;">404</div>
+      <div style="position:absolute;top:0;right:0;width:0;height:0;border-top:24px solid var(--primary);border-left:24px solid transparent;border-top-right-radius:12px;"></div>
+    </div>
+
+    <h1 style="font-size:2.4rem;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:8px;">
+      Page Not Found
+    </h1>
+    <p style="font-size:1.05rem;color:var(--text-secondary);max-width:440px;line-height:1.5;margin-bottom:32px;">
+      The page you are looking for doesn't exist or has been moved.
+    </p>
+
+    <a href="index.html" class="btn btn-primary btn-lg" style="box-shadow:var(--shadow-glow);">
+      Go to Homepage &nbsp;→
+    </a>
+  </main>
+
+  <!-- Simple Footer -->
+  <footer class="footer">
+    <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+      <div>© 2026 PDFNova Platform. All rights reserved.</div>
+      <div style="display:flex;gap:16px;">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="faq.html">Help</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

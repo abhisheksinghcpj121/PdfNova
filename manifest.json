@@ -1,0 +1,42 @@
+{
+  "name": "PDFNova - Professional PDF Tools & Editor",
+  "short_name": "PDFNova",
+  "description": "Fast, private, and offline-capable PDF tools. Merge, split, compress, edit, and convert documents locally.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#F7F8FC",
+  "theme_color": "#E94350",
+  "orientation": "any",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192' fill='%23E94350'><rect width='192' height='192' rx='36' fill='%23FCE7E9'/><path d='M110 30H50a16 16 0 0 0-16 16v100a16 16 0 0 0 16 16h92a16 16 0 0 0 16-16V76z' fill='none' stroke='%23E94350' stroke-width='14'/><polyline points='110 30 110 76 158 76' fill='none' stroke='%23E94350' stroke-width='14'/><line x1='64' y1='112' x2='128' y2='112' stroke='%237046D0' stroke-width='12' stroke-linecap='round'/><line x1='64' y1='138' x2='108' y2='138' stroke='%237046D0' stroke-width='12' stroke-linecap='round'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23E94350'><rect width='512' height='512' rx='96' fill='%23FCE7E9'/><path d='M295 80H135a42 42 0 0 0-42 42v268a42 42 0 0 0 42 42h242a42 42 0 0 0 42-42V202z' fill='none' stroke='%23E94350' stroke-width='36'/><polyline points='295 80 295 202 419 202' fill='none' stroke='%23E94350' stroke-width='36'/><line x1='170' y1='290' x2='340' y2='290' stroke='%237046D0' stroke-width='32' stroke-linecap='round'/><line x1='170' y1='360' x2='280' y2='360' stroke='%237046D0' stroke-width='32' stroke-linecap='round'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Merge PDF",
+      "url": "tool.html?tool=merge",
+      "description": "Combine multiple PDFs into one"
+    },
+    {
+      "name": "Compress PDF",
+      "url": "tool.html?tool=compress",
+      "description": "Reduce PDF file size"
+    },
+    {
+      "name": "PDF Editor",
+      "url": "editor.html",
+      "description": "Draw, sign, and annotate PDFs"
+    }
+  ]
+}
