@@ -1,0 +1,57 @@
+{
+  "name": "pdfnova",
+  "version": "1.0.0",
+  "description": "PDFNova - Production-grade modern PDF tools and editor platform",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "serve:frontend": "node scripts/serve-frontend.js",
+    "tunnel": "ngrok http 3000",
+    "tunnel:free": "npx localtunnel --port 3000",
+    "test": "jest --runInBand --detectOpenHandles"
+  },
+  "keywords": [
+    "pdf",
+    "tools",
+    "editor",
+    "pdf-lib",
+    "pdfjs",
+    "ocr",
+    "convert",
+    "merge",
+    "split",
+    "compress"
+  ],
+  "author": "PDFNova Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@pdfsmaller/pdf-decrypt": "^1.0.1",
+    "@pdfsmaller/pdf-encrypt": "^1.2.0",
+    "archiver": "^5.3.2",
+    "compression": "^1.8.2",
+    "cors": "^2.8.6",
+    "docx": "^9.13.0",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "multer": "^2.5.0",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^2.4.5",
+    "pdfjs-dist": "^3.11.174",
+    "sharp": "^0.35.5",
+    "tesseract.js": "^7.0.0",
+    "uuid": "^14.0.3"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "supertest": "^7.3.1"
+  },
+  "jest": {
+    "testTimeout": 35000,
+    "testEnvironment": "node"
+  }
+}

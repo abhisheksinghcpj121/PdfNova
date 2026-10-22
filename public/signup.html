@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - PDFNova</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E94350'><path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#E94350">
+  <style>
+    .auth-page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: radial-gradient(circle at 90% 10%, rgba(112, 70, 208, 0.05) 0%, transparent 40%),
+                  radial-gradient(circle at 10% 90%, rgba(233, 67, 80, 0.05) 0%, transparent 40%),
+                  var(--bg-base);
+    }
+    .auth-box {
+      width: 100%;
+      max-width: 440px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 36px 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-page-wrapper">
+    <div style="margin-bottom: 24px;">
+      <a href="index.html" class="nav-brand" style="justify-content:center;">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+        </div>
+        <span>PDFNova</span>
+      </a>
+    </div>
+
+    <div class="auth-box">
+      <h2 style="font-size:1.6rem;font-weight:800;color:var(--text-primary);margin-bottom:6px;">Create an Account</h2>
+      <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:24px;">
+        Join PDFNova to keep your document history and unlock higher processing limits.
+      </p>
+
+      <div id="authAlert" class="auth-alert-banner" style="display:none;"></div>
+
+      <form id="standaloneSignupForm">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="nameInput" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name" autofocus>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="emailInput" class="form-input" placeholder="you@example.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password (min 6 characters)</label>
+          <div class="password-input-wrap">
+            <input type="password" id="passwordInput" class="form-input" placeholder="••••••••" required minlength="6" autocomplete="new-password">
+            <button type="button" class="toggle-pwd-btn" id="togglePwdBtn">👁</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Confirm Password</label>
+          <input type="password" id="confirmPasswordInput" class="form-input" placeholder="••••••••" required minlength="6" autocomplete="new-password">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitBtn" style="margin-top:12px;">
+          <span>Create Account</span>
+        </button>
+      </form>
+
+      <div class="auth-footer-text">
+        Already have an account? <a href="login.html">Sign in here</a>
+      </div>
+      <div style="text-align:center;margin-top:12px;">
+        <a href="index.html" style="font-size:0.82rem;color:var(--text-muted);">← Return to Homepage</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (PDFNovaAuth.isLoggedIn()) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      const form = document.getElementById('standaloneSignupForm');
+      const nameInput = document.getElementById('nameInput');
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      const confirmInput = document.getElementById('confirmPasswordInput');
+      const submitBtn = document.getElementById('submitBtn');
+      const alertBox = document.getElementById('authAlert');
+      const togglePwdBtn = document.getElementById('togglePwdBtn');
+
+      togglePwdBtn.onclick = () => {
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          togglePwdBtn.textContent = '🔒';
+        } else {
+          passwordInput.type = 'password';
+          togglePwdBtn.textContent = '👁';
+        }
+      };
+
+      form.onsubmit = async (e) => {
+        e.preventDefault();
+        alertBox.style.display = 'none';
+
+        if (passwordInput.value !== confirmInput.value) {
+          alertBox.className = 'auth-alert-banner error';
+          alertBox.textContent = 'Passwords do not match. Please re-enter carefully.';
+          alertBox.style.display = 'block';
+          confirmInput.focus();
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Creating Account...</span>';
+
+        try {
+          const res = await PDFNovaAuth.signup(nameInput.value.trim(), emailInput.value.trim(), passwordInput.value);
+          window.location.href = 'index.html';
+        } catch (err) {
+          alertBox.className = 'auth-alert-banner error';
+          alertBox.textContent = err.message;
+          alertBox.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Create Account</span>';
+        }
+      };
+    });
+  </script>
+</body>
+</html>

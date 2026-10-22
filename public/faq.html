@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ & Help - PDFNova</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+        </div>
+        <span>PDFNova</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#popularTools" class="nav-link">Tools</a></li>
+          <li><a href="editor.html" class="nav-link">PDF Editor</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="faq.html" class="nav-link active">Help</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" aria-label="Toggle Dark Mode"></button>
+        <a href="index.html" class="btn btn-primary btn-sm">Explore Tools</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Help Hero -->
+  <main class="container section" style="padding: 60px 24px;">
+    <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+      <div class="hero-badge" style="margin: 0 auto 16px;">
+        <span class="dot"></span>
+        <span>Support & Help Center</span>
+      </div>
+      <h1 style="font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px;">
+        Frequently Asked Questions
+      </h1>
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 48px;">
+        Everything you need to know about PDFNova's features, privacy, and file conversions.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="faq-list" style="max-width: 820px;">
+      <div class="faq-item active">
+        <div class="faq-question">
+          <span>Is PDFNova completely free to use?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes! PDFNova is completely free. There are no paywalls, hidden fees, watermarks added to your documents without your request, or mandatory sign-up screens.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Are my uploaded files safe and private?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes. Every upload is placed in an isolated temporary folder named with a random UUID. Access to download or delete files requires a high-entropy secret token. All files are automatically removed after 60 minutes or immediately when you click "Delete File Now".
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What file formats does PDFNova support?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          We support PDF documents (.pdf), images (JPG, PNG, WebP), and Microsoft Office files (.docx, .xlsx, .pptx). PDF-to-Word conversions run natively in pure JavaScript without external dependencies.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is the maximum file size limit?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          The standard limit is 50 MB per file, and batches of up to 20 files can be uploaded simultaneously (for merging or batch conversions).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you store my files on the server?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          No permanent storage or database is used. Files exist only in volatile temporary directories during processing and are wiped clean by our scheduled garbage collection process.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How does the OCR (Optical Character Recognition) feature work?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          PDFNova includes a built-in OCR engine powered by Tesseract.js. It renders scanned document pages, detects text lines, and outputs both a plain text transcription and a searchable PDF with confidence markers.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What are the system requirements for Office to PDF conversion?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          To convert Word (.docx), Excel (.xlsx), or PowerPoint (.pptx) documents directly into PDF, LibreOffice headless must be installed on the host machine. If LibreOffice is not detected, PDFNova clearly displays an explanation and links to setup instructions. Note that PDF to Word (.docx) works out of the box without LibreOffice!
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+      <div>© 2026 PDFNova Platform. All rights reserved.</div>
+      <div style="display:flex;gap:16px;">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

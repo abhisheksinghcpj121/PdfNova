@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy & Security - PDFNova</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+        </div>
+        <span>PDFNova</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#popularTools" class="nav-link">Tools</a></li>
+          <li><a href="editor.html" class="nav-link">PDF Editor</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="faq.html" class="nav-link">Help</a></li>
+          <li><a href="privacy.html" class="nav-link active">Privacy</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" aria-label="Toggle Dark Mode"></button>
+        <a href="index.html" class="btn btn-primary btn-sm">Explore Tools</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Privacy Header -->
+  <main class="container section" style="padding: 60px 24px;">
+    <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+      <div class="hero-badge" style="margin: 0 auto 16px;">
+        <span class="dot"></span>
+        <span>Data Safety & Confidentiality</span>
+      </div>
+      <h1 style="font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px;">
+        Privacy & Security
+      </h1>
+      <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 48px;">
+        Your privacy is important to us. Here's how we protect your documents and data.
+      </p>
+    </div>
+
+    <!-- 4 Security Cards Grid Matching Mockup -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 1040px; margin: 0 auto 60px;">
+      <div class="tool-card">
+        <div class="tool-card-icon coral" style="width: 48px; height: 48px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="tool-card-title">Files are temporary</h3>
+        <p class="tool-card-desc">Automatically deleted from the server 60 minutes after processing.</p>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-icon violet" style="width: 48px; height: 48px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3 class="tool-card-title">No file storage</h3>
+        <p class="tool-card-desc">We do not store your documents permanently or index contents.</p>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-icon mint" style="width: 48px; height: 48px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3 class="tool-card-title">Secure processing</h3>
+        <p class="tool-card-desc">All files are processed in isolated environments with random UUIDs.</p>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-icon blue" style="width: 48px; height: 48px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+        </div>
+        <h3 class="tool-card-title">Your data stays private</h3>
+        <p class="tool-card-desc">We do not access, inspect, sell, or share your files with any third party.</p>
+      </div>
+    </div>
+
+    <!-- Security Engineering Details -->
+    <div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px;">
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 36px;">
+        <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">
+          1. Cryptographic Job Isolation & Capability Tokens
+        </h2>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">
+          Every upload is assigned a cryptographically random UUID v4 and isolated in a separate subdirectory. Downloads and immediate deletions are strictly gated by high-entropy capability tokens (hex-encoded 24-byte random values). An attacker guessing a job ID cannot access the document without the corresponding secret token.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 36px;">
+        <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">
+          2. Automatic Expiry & Background Scheduled Cleanup
+        </h2>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">
+          PDFNova runs an automatic garbage collection worker on a periodic schedule (every 15 minutes) as well as upon server boot. Once a job reaches its Time-To-Live (default 60 minutes), the entire directory containing input and output files is permanently deleted from the disk. Users can also trigger immediate deletion using the "Delete File Now" button.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 36px;">
+        <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">
+          3. Transparent Platform Considerations
+        </h2>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">
+          PDFNova uses local ephemeral filesystem storage. Please note that on certain serverless platforms (e.g. AWS Lambda, Vercel), local filesystems are ephemeral and bound to container life cycles. We do not claim absolute data destruction beyond the filesystem scope, but guarantee our software never creates permanent database records or persistent cloud copies.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-bottom" style="border-top:none;padding-top:0;">
+      <div>© 2026 PDFNova Platform. All rights reserved.</div>
+      <div style="display:flex;gap:16px;">
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
